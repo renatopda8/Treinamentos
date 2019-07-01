@@ -8,7 +8,8 @@ import { PhotoService } from '../../photo/photo.service';
 
 @Component({
     selector: 'ap-photo-comments',
-    templateUrl: './photo-comments.component.html'
+    templateUrl: './photo-comments.component.html',
+    styleUrls: ['photo-comments.css']
 })
 export class PhotoCommentsComponent implements OnInit {
 
@@ -30,9 +31,6 @@ export class PhotoCommentsComponent implements OnInit {
         this.comments$ = this.photoService
             .addComment(this.photoId, comment)
             .pipe(switchMap(() => this.photoService.getComments(this.photoId)))
-            .pipe(tap(() => {
-                this.commentForm.reset();
-                alert('Comentário adicionado com sucesso');
-            }));
+            .pipe(tap(() => this.commentForm.reset()));
     }
 }
