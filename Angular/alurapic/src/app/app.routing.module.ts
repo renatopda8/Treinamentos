@@ -21,7 +21,8 @@ const routes: Routes = [
   { path: 'user/:userName', component: PhotoListComponent, resolve: { photos: PhotoListResolver } },
   { path: 'photo/add', component: PhotoFormComponent, canActivate: [AuthGuard] },
   { path: 'photo/:photoId', component: PhotoDetailsComponent },
-  { path: '**', component: NotFoundComponent }
+  { path: 'not-found', component: NotFoundComponent },
+  { path: '**', redirectTo: 'not-found' }
 ];
 
 @NgModule({
