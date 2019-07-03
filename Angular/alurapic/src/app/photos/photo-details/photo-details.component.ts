@@ -6,6 +6,7 @@ import { PhotoService } from '../photo/photo.service';
 import { Photo } from '../photo/photo';
 import { AlertService } from 'src/app/shared/components/alert/alert.service';
 import { UserService } from 'src/app/core/user/user.service';
+import { triggerAsyncId } from 'async_hooks';
 
 @Component({
     templateUrl: './photo-details.component.html'
@@ -40,5 +41,15 @@ export class PhotoDetailsComponent implements OnInit {
             console.log(err);
             this.alertService.warning('Could not delete the photo!', true);
         });
+    }
+
+    like(photo: Photo) {
+        this.photoService
+            .like(photo.id)
+            .subscribe(liked => {
+                if (liked) {
+                    this.photo$ = this.photoService.findById(photo.id);
+                }
+            });
     }
 }
