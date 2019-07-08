@@ -1,12 +1,13 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { PlatformDetectorService } from 'src/app/core/platform/platform.detector.service';
 import { Router } from '@angular/router';
 
+import { PlatformDetectorService } from 'src/app/core/platform/platform.detector.service';
 import { lowerCaseValidator } from 'src/app/shared/validators/lower-case.validators';
 import { UserNotTakenValidatorService } from './user-not-taken.validator.service';
 import { NewUser } from './new-user';
 import { SignUpService } from './signup.service';
+import { userNamePasswordValidator } from './username-password.validator';
 
 @Component({
     templateUrl: './signup.component.html',
@@ -35,7 +36,10 @@ export class SignUpComponent implements OnInit {
                 Validators.maxLength(30)],
                 this.userNotTakenValidatorService.checkUserNameTaken()
             ],
-            password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(14)]],
+            password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(14)]]
+        },
+        {
+            validator: userNamePasswordValidator
         });
         this.platformDetectorService.isPlatformBrowser() && this.emailInput.nativeElement.focus();
     }
