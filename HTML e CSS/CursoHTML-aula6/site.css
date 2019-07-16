@@ -5,6 +5,20 @@ body {
 	line-height: 1.5;
 }
 
+main {
+	float: left;
+	width: 85%;
+}
+
+h1 {
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 30px;
+	clear: both;
+}
+
 h1, h2 {
 	font-family: "Open Sans Condensed", "Arial", sans-serif;
 }
@@ -16,6 +30,7 @@ h1, h2 {
 	padding: 25px;
 	border-bottom: 10px solid black;
 	font-size: 60px;
+	text-transform: uppercase;
 }
 
 p {
@@ -28,26 +43,60 @@ p {
 	border: 10px solid #C2CCCA;
 	width: 250px;
 	box-sizing: border-box;
-	margin: 20px 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
-aside {
-	background-color: #3C1D3D;
-	color: #F2FFFC;
+.fiat {
+	float: right;
+	margin-left: 40px;
+}
+
+.petrobras {
+	float: left;
+	margin-right: 40px;
 }
 
 #rodape-pagina {
 	background-color: #000;
 	color: #F2FFFC;
 	padding: 20px;
+	clear: both;
+}
+
+.leia-mais {
+	padding: 8px;
+	margin: 16px;
+	display: block;
+	font-size: 24px;
+	text-align: center;
+	background-color: #E6E7E8;
 }
 
 nav a {
 	color: #F2FFFC;
+	text-transform: lowercase;
 }
 
 main a {
 	color: #851944;
+}
+
+aside, img {
+	float: right;
+	width: 15%;
+}
+
+aside {
+	background-color: #3C1D3D;
+	color: #F2FFFC;
+	clear: right;
+	box-sizing: border-box;
+}
+
+aside h1 {
+	font-size: 30px;
+	margin-bottom: 25px;
 }
 
 aside a {
@@ -63,11 +112,6 @@ blockquote, aside, footer {
 	width: 720px;
 	margin: auto;
 	padding: 30px 0;
-}
-
-aside h1 {
-	font-size: 30px;
-	margin-bottom: 25px;
 }
 
 .icones-sociais li {
@@ -89,12 +133,27 @@ em {
 	font-style: italic;
 }
 
-h2 {
-	font-size: 30px;
-}
-
 article {
 	padding-bottom: 30px;
 	border-bottom: 1px solid #ccc;
 	margin-bottom: 20px;
+}
+
+.icones-sociais a {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	text-indent: -9999px;
+}
+
+.github {
+	background-image: url(github.png);
+}
+
+.twitter {
+	background-image: url(twitter.png);
+}
+
+.linkedin {
+	background-image: url(linkedin.png);
 }
