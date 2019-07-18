@@ -6,8 +6,9 @@ body {
 }
 
 main {
-	float: left;
 	width: 85%;
+	float: left;
+	padding-bottom: 80px;
 }
 
 h1 {
@@ -47,6 +48,11 @@ p {
 	margin-bottom: 20px;
 }
 
+cite {
+	font-style: italic;
+    float: right;
+}
+
 .fiat {
 	float: right;
 	margin-left: 40px;
@@ -62,6 +68,9 @@ p {
 	color: #F2FFFC;
 	padding: 20px;
 	clear: both;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 
 .leia-mais {
@@ -80,11 +89,6 @@ nav a {
 
 main a {
 	color: #851944;
-}
-
-aside, img {
-	float: right;
-	width: 15%;
 }
 
 aside {
@@ -123,6 +127,22 @@ blockquote, aside, footer {
 	color: #F2FFFC;
 	padding: 20px;
 	text-align: center;
+	width: 15%;
+	position: relative;
+	top: 310px;
+}
+
+.joao-foto {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.navegacao-site, .joao-foto {
+	float: right;
+	box-sizing: border-box;
+	border-left: 10px solid black;
+	border-bottom: 10px solid black;
 }
 
 strong {
