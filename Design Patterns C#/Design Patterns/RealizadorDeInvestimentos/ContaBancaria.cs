@@ -7,6 +7,11 @@
             this.Saldo = saldo;
         }
 
-        public decimal Saldo { get; set; }
+        public decimal Saldo { get; private set; }
+
+        public void Deposita(decimal valor)
+        {
+            this.Saldo += valor;
+        }
     }
 }

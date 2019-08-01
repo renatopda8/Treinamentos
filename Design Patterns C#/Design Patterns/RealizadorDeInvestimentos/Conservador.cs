@@ -1,10 +1,10 @@
 ﻿namespace RealizadorDeInvestimentos
 {
-    class Conservador : IInvestimento
+    public class Conservador : IInvestimento
     {
         public decimal Calcula(ContaBancaria contaBancaria)
         {
-            return contaBancaria.Saldo * 0.8m;
+            return contaBancaria.Saldo * 0.008m;
         }
     }
 }

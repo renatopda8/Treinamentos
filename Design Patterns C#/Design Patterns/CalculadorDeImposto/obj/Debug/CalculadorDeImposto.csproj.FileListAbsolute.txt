@@ -4,3 +4,4 @@ C:\Users\programador5\Documents\Treinamentos\Design Patterns C#\Design Patterns\
 C:\Users\programador5\Documents\Treinamentos\Design Patterns C#\Design Patterns\CalculadorDeImposto\obj\Debug\CalculadorDeImposto.csproj.CoreCompileInputs.cache
 C:\Users\programador5\Documents\Treinamentos\Design Patterns C#\Design Patterns\CalculadorDeImposto\obj\Debug\CalculadorDeImposto.exe
 C:\Users\programador5\Documents\Treinamentos\Design Patterns C#\Design Patterns\CalculadorDeImposto\obj\Debug\CalculadorDeImposto.pdb
+C:\Users\programador5\Documents\Treinamentos\Design Patterns C#\Design Patterns\CalculadorDeImposto\obj\Debug\CalculadorDeImposto.csprojAssemblyReference.cache

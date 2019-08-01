@@ -4,9 +4,16 @@ namespace RealizadorDeInvestimentos
 {
     public class Moderado : IInvestimento
     {
+        private Random Random { get; }
+
+        public Moderado()
+        {
+            this.Random = new Random();
+        }
+
         public decimal Calcula(ContaBancaria contaBancaria)
         {
-            return contaBancaria.Saldo * (new Random().Next(2) > 1 ? 2.5m : 0.7m);
+            return contaBancaria.Saldo * (Random.Next(101) < 50 ? 0.025m : 0.007m);
         }
     }
 }
