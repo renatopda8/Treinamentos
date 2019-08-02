@@ -6,12 +6,7 @@
 
         public decimal Desconta(Orcamento orcamento)
         {
-            if (orcamento.Itens.Count > 5)
-            {
-                return orcamento.Valor * 0.1m;
-            }
-
-            return Proximo.Desconta(orcamento);
+            return orcamento.Itens.Count > 5 ? orcamento.Valor * 0.1m : Proximo.Desconta(orcamento);
         }
     }
 }
