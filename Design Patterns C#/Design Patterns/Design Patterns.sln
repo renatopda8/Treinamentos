@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29123.88
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadorDeImposto", "CalculadorDeImposto\CalculadorDeImposto.csproj", "{35DD389A-C61E-496E-A8B7-097543E9FC05}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealizadorDeInvestimentos", "RealizadorDeInvestimentos\RealizadorDeInvestimentos.csproj", "{FB9E1748-71AC-4BB0-8485-01443517550D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadorDeDescontos", "CalculadorDeDescontos\CalculadorDeDescontos.csproj", "{05E170CA-23C9-45AA-8515-95251EBFBFA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadorDeDescontos", "CalculadorDeDescontos\CalculadorDeDescontos.csproj", "{05E170CA-23C9-45AA-8515-95251EBFBFA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormatosDeRequisicoes", "FormatosDeRequisicoes\FormatosDeRequisicoes.csproj", "{A255A7EB-757D-4E54-9E22-055B14CBFDDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{05E170CA-23C9-45AA-8515-95251EBFBFA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05E170CA-23C9-45AA-8515-95251EBFBFA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05E170CA-23C9-45AA-8515-95251EBFBFA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A255A7EB-757D-4E54-9E22-055B14CBFDDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A255A7EB-757D-4E54-9E22-055B14CBFDDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A255A7EB-757D-4E54-9E22-055B14CBFDDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A255A7EB-757D-4E54-9E22-055B14CBFDDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
