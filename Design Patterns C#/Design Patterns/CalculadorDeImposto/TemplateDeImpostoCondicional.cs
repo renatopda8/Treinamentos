@@ -14,8 +14,8 @@
             return MinimaTaxacao(orcamento);
         }
 
-        public abstract bool DeveUserMaximaTaxacao(Orcamento orcamento);
-        public abstract decimal MaximaTaxacao(Orcamento orcamento);
-        public abstract decimal MinimaTaxacao(Orcamento orcamento);
+        protected abstract bool DeveUserMaximaTaxacao(Orcamento orcamento);
+        protected abstract decimal MaximaTaxacao(Orcamento orcamento);
+        protected abstract decimal MinimaTaxacao(Orcamento orcamento);
     }
 }
