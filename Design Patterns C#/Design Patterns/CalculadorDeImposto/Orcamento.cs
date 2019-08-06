@@ -1,9 +1,22 @@
-﻿namespace CalculadorDeImposto
+﻿using System.Collections.Generic;
+using CalculadorDeImpostos;
+
+namespace CalculadorDeImposto
 {
     public class Orcamento
     {
-        public Orcamento(decimal valor) => this.Valor = valor;
+        public decimal Valor { get; private set; }
+        public IList<Item> Itens { get; private set; }
 
-        public decimal Valor { get; }
+        public Orcamento(decimal valor)
+        {
+            this.Valor = valor;
+            this.Itens = new List<Item>();
+        }
+
+        public void AdicionaItem(Item item)
+        {
+            Itens.Add(item);
+        }
     }
 }
