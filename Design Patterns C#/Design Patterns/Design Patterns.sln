@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadorDeDescontos", "Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormatosDeRequisicoes", "FormatosDeRequisicoes\FormatosDeRequisicoes.csproj", "{A255A7EB-757D-4E54-9E22-055B14CBFDDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComposicaoDeImpostos", "ComposicaoDeImpostos\ComposicaoDeImpostos.csproj", "{228A0CCE-CF25-4BDD-84AB-025A3D3BD8B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A255A7EB-757D-4E54-9E22-055B14CBFDDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A255A7EB-757D-4E54-9E22-055B14CBFDDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A255A7EB-757D-4E54-9E22-055B14CBFDDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{228A0CCE-CF25-4BDD-84AB-025A3D3BD8B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{228A0CCE-CF25-4BDD-84AB-025A3D3BD8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{228A0CCE-CF25-4BDD-84AB-025A3D3BD8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{228A0CCE-CF25-4BDD-84AB-025A3D3BD8B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
