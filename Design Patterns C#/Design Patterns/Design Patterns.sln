@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormatosDeRequisicoes", "Fo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComposicaoDeImpostos", "ComposicaoDeImpostos\ComposicaoDeImpostos.csproj", "{228A0CCE-CF25-4BDD-84AB-025A3D3BD8B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiltrosDeContas", "FiltrosDeContas\FiltrosDeContas.csproj", "{C35C0008-2957-4DD5-BE48-A35410F437B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{228A0CCE-CF25-4BDD-84AB-025A3D3BD8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{228A0CCE-CF25-4BDD-84AB-025A3D3BD8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{228A0CCE-CF25-4BDD-84AB-025A3D3BD8B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C35C0008-2957-4DD5-BE48-A35410F437B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C35C0008-2957-4DD5-BE48-A35410F437B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C35C0008-2957-4DD5-BE48-A35410F437B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C35C0008-2957-4DD5-BE48-A35410F437B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
