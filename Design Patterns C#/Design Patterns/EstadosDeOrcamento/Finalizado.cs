@@ -4,10 +4,7 @@ namespace EstadosDeOrcamento
 {
     public class Finalizado : IEstadoDeOrcamento
     {
-        public void AplicaDescontoExtra(Orcamento orcamento)
-        {
-            throw new Exception("Descontos não são permitidos para orçamentos finalizados");
-        }
+        public void AplicaDescontoExtra(Orcamento orcamento) { }
 
         public void Aprova(Orcamento orcamento)
         {

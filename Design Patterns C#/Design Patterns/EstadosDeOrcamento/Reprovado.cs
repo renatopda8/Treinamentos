@@ -4,10 +4,7 @@ namespace EstadosDeOrcamento
 {
     public class Reprovado : IEstadoDeOrcamento
     {
-        public void AplicaDescontoExtra(Orcamento orcamento)
-        {
-            throw new Exception("Descontos não são permitidos para orçamentos reprovados");
-        }
+        public void AplicaDescontoExtra(Orcamento orcamento) { }
 
         public void Aprova(Orcamento orcamento)
         {

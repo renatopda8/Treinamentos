@@ -4,9 +4,17 @@ namespace EstadosDeOrcamento
 {
     public class EmAprovacao : IEstadoDeOrcamento
     {
+        private bool DescontoJaAplicado { get; set; } = false;
+
         public void AplicaDescontoExtra(Orcamento orcamento)
         {
+            if (DescontoJaAplicado)
+            {
+                throw new Exception("Desconto já aplicado");
+            }
+
             orcamento.Valor -= orcamento.Valor * 0.05m;
+            this.DescontoJaAplicado = true;
         }
 
         public void Aprova(Orcamento orcamento)
