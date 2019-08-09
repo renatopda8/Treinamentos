@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComposicaoDeImpostos", "Com
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiltrosDeContas", "FiltrosDeContas\FiltrosDeContas.csproj", "{C35C0008-2957-4DD5-BE48-A35410F437B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstadosDeOrcamento", "EstadosDeOrcamento\EstadosDeOrcamento.csproj", "{994B9142-F862-4294-AB9B-C9E8D08BAEE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{C35C0008-2957-4DD5-BE48-A35410F437B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C35C0008-2957-4DD5-BE48-A35410F437B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C35C0008-2957-4DD5-BE48-A35410F437B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{994B9142-F862-4294-AB9B-C9E8D08BAEE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{994B9142-F862-4294-AB9B-C9E8D08BAEE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{994B9142-F862-4294-AB9B-C9E8D08BAEE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{994B9142-F862-4294-AB9B-C9E8D08BAEE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
