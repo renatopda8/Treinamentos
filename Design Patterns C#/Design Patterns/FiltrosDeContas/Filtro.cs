@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace FiltrosDeContas
 {
@@ -18,9 +19,9 @@ namespace FiltrosDeContas
 
         public abstract IList<Conta> Filtra(IList<Conta> contas);
 
-        protected IList<Conta> FiltraOutroFiltro(IList<Conta> contas)
+        protected IList<Conta> ExecutaOutroFiltro(IList<Conta> contas, IList<Conta> jaFiltradas)
         {
-            return OutroFiltro.Filtra(contas);
+            return OutroFiltro == null ? jaFiltradas : jaFiltradas.Concat(OutroFiltro.Filtra(contas.Except(jaFiltradas).ToList())).ToList();
         }
     }
 }

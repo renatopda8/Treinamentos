@@ -11,8 +11,7 @@ namespace FiltrosDeContas
 
         public override IList<Conta> Filtra(IList<Conta> contas)
         {
-            IEnumerable<Conta> filtradas = contas.Where(c => c.Saldo < 100);
-            return filtradas.Concat(OutroFiltro.Filtra(contas.Except(filtradas).ToList())).ToList();
+            return ExecutaOutroFiltro(contas, contas.Where(c => c.Saldo < 100).ToList());
         }
     }
 }

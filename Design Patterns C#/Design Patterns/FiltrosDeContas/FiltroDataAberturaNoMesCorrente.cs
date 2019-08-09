@@ -12,8 +12,7 @@ namespace FiltrosDeContas
 
         public override IList<Conta> Filtra(IList<Conta> contas)
         {
-            IEnumerable<Conta> filtradas = contas.Where(c => EhMesCorrente(c.DataDeAbertura));
-            return filtradas.Concat(OutroFiltro.Filtra(contas.Except(filtradas).ToList())).ToList();
+            return ExecutaOutroFiltro(contas, contas.Where(c => EhMesCorrente(c.DataDeAbertura)).ToList());
         }
 
         private bool EhMesCorrente(DateTime data)
