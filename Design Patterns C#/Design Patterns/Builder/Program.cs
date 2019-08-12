@@ -6,13 +6,25 @@ namespace Builder
     {
         public static void Main(string[] args)
         {
+            ItemDaNotaBuilder idnb = new ItemDaNotaBuilder();
+            idnb.ComDescricao("Item 1")
+                .ComValor(100);
+
+            ItemDaNota item1 = idnb.Constroi();
+
+            idnb = new ItemDaNotaBuilder();
+            idnb.ComDescricao("Item 2")
+                .ComValor(200);
+
+            ItemDaNota item2 = idnb.Constroi();
+
             NotaFiscalBuilder builder = new NotaFiscalBuilder();
             builder.ParaEmpresa("Empresa Teste")
                 .ComCnpj("123456789")
                 .NaDataAtual()
                 .ComObservacoes("Observações da nota fiscal")
-                .ComItem(new ItemDaNota("Item 1", 100))
-                .ComItem(new ItemDaNota("Item 2", 200));
+                .ComItem(item1)
+                .ComItem(item2);
 
             NotaFiscal nf = builder.Constroi();
 
