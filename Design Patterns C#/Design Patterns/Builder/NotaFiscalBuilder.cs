@@ -15,6 +15,7 @@ namespace Builder
 
         public NotaFiscalBuilder()
         {
+            DataDeEmissao = DateTime.Now;
             ItensDaNota = new List<ItemDaNota>();
         }
 
@@ -35,9 +36,9 @@ namespace Builder
             return this;
         }
 
-        public NotaFiscalBuilder NaDataAtual()
+        public NotaFiscalBuilder NaData(DateTime dataDeEmissao)
         {
-            DataDeEmissao = DateTime.Now;
+            DataDeEmissao = dataDeEmissao;
             return this;
         }
 
