@@ -48,7 +48,7 @@ namespace Builder
             return this;
         }
 
-        public NotaFiscalBuilder ComItem(ItemDaNota item)
+        public NotaFiscalBuilder Com(ItemDaNota item)
         {
             ItensDaNota.Add(item);
             ValorBruto += item.Valor;

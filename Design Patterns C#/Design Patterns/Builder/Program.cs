@@ -22,8 +22,8 @@ namespace Builder
             builder.ParaEmpresa("Empresa Teste")
                 .ComCnpj("123456789")
                 .ComObservacoes("Observações da nota fiscal")
-                .ComItem(item1)
-                .ComItem(item2);
+                .Com(item1)
+                .Com(item2);
 
             NotaFiscal nf = builder.Constroi();
 
