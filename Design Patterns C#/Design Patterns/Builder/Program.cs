@@ -25,6 +25,9 @@ namespace Builder
                 .Com(item1)
                 .Com(item2);
 
+            builder.AdicionaAcao(new EnviaPorEmail());
+            builder.AdicionaAcao(new NotaFiscalDAO());
+
             NotaFiscal nf = builder.Constroi();
 
             Console.WriteLine(nf.ValorBruto);

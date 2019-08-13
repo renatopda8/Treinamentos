@@ -12,16 +12,25 @@ namespace Builder
         public DateTime DataDeEmissao { get; private set; }
         public string Observacoes { get; private set; }
         public List<ItemDaNota> ItensDaNota { get; private set; }
+        private List<IAcaoAposGerarNota> AcoesAposGerarNota { get; }
 
         public NotaFiscalBuilder()
         {
             DataDeEmissao = DateTime.Now;
             ItensDaNota = new List<ItemDaNota>();
+            AcoesAposGerarNota = new List<IAcaoAposGerarNota>();
         }
 
         public NotaFiscal Constroi()
         {
-            return new NotaFiscal(RazaoSocial, Cnpj, ValorBruto, Impostos, DataDeEmissao, Observacoes, ItensDaNota);
+            NotaFiscal nf = new NotaFiscal(RazaoSocial, Cnpj, ValorBruto, Impostos, DataDeEmissao, Observacoes, ItensDaNota);
+            AcoesAposGerarNota.ForEach(acao => acao.Executa(nf));
+            return nf;
+        }
+
+        public void AdicionaAcao(IAcaoAposGerarNota novaAcao)
+        {
+            AcoesAposGerarNota.Add(novaAcao);
         }
 
         public NotaFiscalBuilder ParaEmpresa(string razaoSocial)
