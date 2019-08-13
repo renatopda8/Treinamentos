@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Builder
 {
@@ -18,16 +19,12 @@ namespace Builder
 
             ItemDaNota item2 = idnb.Constroi();
 
-            NotaFiscalBuilder builder = new NotaFiscalBuilder();
+            NotaFiscalBuilder builder = new NotaFiscalBuilder(new List<IAcaoAposGerarNota> { new EnviaPorEmail(), new NotaFiscalDAO(), new Multiplicador(2) });
             builder.ParaEmpresa("Empresa Teste")
                 .ComCnpj("123456789")
                 .ComObservacoes("Observações da nota fiscal")
                 .Com(item1)
                 .Com(item2);
-
-            builder.AdicionaAcao(new EnviaPorEmail());
-            builder.AdicionaAcao(new NotaFiscalDAO());
-            builder.AdicionaAcao(new Multiplicador(2));
 
             NotaFiscal nf = builder.Constroi();
 
