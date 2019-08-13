@@ -47,6 +47,7 @@
     <Compile Include="EnviaPorEmail.cs" />
     <Compile Include="ItemDaNota.cs" />
     <Compile Include="ItemDaNotaBuilder.cs" />
+    <Compile Include="Multiplicador.cs" />
     <Compile Include="NotaFiscal.cs" />
     <Compile Include="NotaFiscalBuilder.cs" />
     <Compile Include="NotaFiscalDAO.cs" />

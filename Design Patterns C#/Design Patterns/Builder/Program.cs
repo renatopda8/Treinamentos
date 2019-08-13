@@ -27,11 +27,12 @@ namespace Builder
 
             builder.AdicionaAcao(new EnviaPorEmail());
             builder.AdicionaAcao(new NotaFiscalDAO());
+            builder.AdicionaAcao(new Multiplicador(2));
 
             NotaFiscal nf = builder.Constroi();
 
-            Console.WriteLine(nf.ValorBruto);
-            Console.WriteLine(nf.Impostos);
+            Console.WriteLine($"Valor da nota fiscal: R$ {nf.ValorBruto:F2}");
+            Console.WriteLine($"Valor dos impostos: R$ {nf.Impostos:F2}");
 
             Console.ReadKey();
         }
