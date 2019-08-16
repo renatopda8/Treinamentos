@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flyweight", "Flyweight\Flyw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memento", "Memento\Memento.csproj", "{9994E1A0-E35A-453C-9DFA-2035AD023ED1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interpreter", "Interpreter\Interpreter.csproj", "{C485A341-FCC4-4AB1-B80D-BCACDCFDC622}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{9994E1A0-E35A-453C-9DFA-2035AD023ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9994E1A0-E35A-453C-9DFA-2035AD023ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9994E1A0-E35A-453C-9DFA-2035AD023ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C485A341-FCC4-4AB1-B80D-BCACDCFDC622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C485A341-FCC4-4AB1-B80D-BCACDCFDC622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C485A341-FCC4-4AB1-B80D-BCACDCFDC622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C485A341-FCC4-4AB1-B80D-BCACDCFDC622}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
