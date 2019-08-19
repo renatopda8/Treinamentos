@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memento", "Memento\Memento.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interpreter", "Interpreter\Interpreter.csproj", "{C485A341-FCC4-4AB1-B80D-BCACDCFDC622}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visitor", "Visitor\Visitor.csproj", "{ED964524-8D1A-4FBB-8900-E51DFEC3857E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{C485A341-FCC4-4AB1-B80D-BCACDCFDC622}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C485A341-FCC4-4AB1-B80D-BCACDCFDC622}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C485A341-FCC4-4AB1-B80D-BCACDCFDC622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED964524-8D1A-4FBB-8900-E51DFEC3857E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED964524-8D1A-4FBB-8900-E51DFEC3857E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED964524-8D1A-4FBB-8900-E51DFEC3857E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED964524-8D1A-4FBB-8900-E51DFEC3857E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
