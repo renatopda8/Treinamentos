@@ -11,7 +11,7 @@
             Direita = direita;
         }
 
-        public int Avalia()
+        public decimal Avalia()
         {
             return Esquerda.Avalia() + Direita.Avalia();
         }

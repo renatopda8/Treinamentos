@@ -2,6 +2,6 @@
 {
     public interface IExpressao
     {
-        int Avalia();
+        decimal Avalia();
     }
 }

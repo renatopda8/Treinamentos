@@ -2,14 +2,19 @@
 {
     public class Numero : IExpressao
     {
-        private int Valor { get; set; }
+        private decimal Valor { get; set; }
 
         public Numero(int valor)
         {
             Valor = valor;
         }
 
-        public int Avalia()
+        public Numero(decimal valor)
+        {
+            Valor = valor;
+        }
+
+        public decimal Avalia()
         {
             return Valor;
         }
