@@ -7,7 +7,7 @@ services:
       context: .
     image: douglasq/nginx
     container_name: nginx
-    port:
+    ports:
       - "80:80"
     networks:
       - production-network
@@ -27,7 +27,7 @@ services:
       context: .
     image: douglasq/alura-books
     container_name: alura-books-1
-    port:
+    ports:
       - "3000"
     networks:
       - production-network
@@ -40,7 +40,7 @@ services:
       context: .
     image: douglasq/alura-books
     container_name: alura-books-2
-    port:
+    ports:
       - "3000"
     networks:
       - production-network
@@ -53,7 +53,7 @@ services:
       context: .
     image: douglasq/alura-books
     container_name: alura-books-3
-    port:
+    ports:
       - "3000"
     networks:
       - production-network
