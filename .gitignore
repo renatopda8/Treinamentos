@@ -5,3 +5,4 @@ node_modules
 .vs
 bin
 obj
+/Docker/Kubernetes/alura-sports/volume_mysql
