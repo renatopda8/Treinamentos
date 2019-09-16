@@ -6,3 +6,4 @@ node_modules
 bin
 obj
 /Docker/Kubernetes/alura-sports/volume_mysql
+/Integração Contínua
