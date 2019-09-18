@@ -1,86 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace Alura.Loja.Testes.ConsoleApp
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            //GravarUsandoAdoNet();
-            //GravarUsandoEntity();
-            //RecuperarProdutos();
-            //ExcluirProdutos();
-            //RecuperarProdutos();
-            AtualizarProdutos();
-        }
-
-        private static void AtualizarProdutos()
-        {
-            GravarUsandoEntity();
-            RecuperarProdutos();
-
-            using (var context = new ProdutoDAOEntity())
+            using (var contexto = new LojaContext())
             {
-                Produto primeiro = context.Produtos().FirstOrDefault();
-                primeiro.Nome = "Harry Potter e a Ordem da Fênix - Editado";
-                context.Atualizar(primeiro);
-            }
+                var serviceProvider = contexto.GetInfrastructure<IServiceProvider>();
+                var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
+                loggerFactory.AddProvider(SqlLoggerProvider.Create());
 
-            RecuperarProdutos();
-        }
+                var produtos = contexto.Produtos.ToList();
 
-        private static void ExcluirProdutos()
-        {
-            using (var context = new ProdutoDAOEntity())
-            {
-                IList<Produto> produtos = context.Produtos().ToList();
-                foreach (Produto produto in produtos)
+                ExibeEntries(contexto.ChangeTracker.Entries());
+
+                var novoProduto = new Produto()
                 {
-                    context.Remover(produto);
-                }
+                    Nome = "Sabão em Pó",
+                    Categoria = "Limpeza",
+                    Preco = 4.99
+                };
+                contexto.Produtos.Add(novoProduto);
+
+                ExibeEntries(contexto.ChangeTracker.Entries());
+
+                contexto.Produtos.Remove(novoProduto);
+
+                ExibeEntries(contexto.ChangeTracker.Entries());
+
+                //contexto.SaveChanges();
+
+                Console.WriteLine("=================");
+                var entry = contexto.Entry(novoProduto);
+                Console.WriteLine($"{entry.Entity.ToString()} - {entry.State}");
             }
         }
 
-        private static void RecuperarProdutos()
+        private static void ExibeEntries(IEnumerable<EntityEntry> entries)
         {
-            using (var context = new ProdutoDAOEntity())
+            Console.WriteLine("=================");
+            foreach (var e in entries)
             {
-                IList<Produto> produtos = context.Produtos().ToList();
-                Console.WriteLine($"Foram encontrados {produtos.Count} produto(s).");
-                foreach (Produto produto in produtos)
-                {
-                    Console.WriteLine(produto.Nome);
-                }
-            }
-        }
-
-        private static void GravarUsandoEntity()
-        {
-            Produto p = new Produto();
-            p.Nome = "Harry Potter e a Ordem da Fênix";
-            p.Categoria = "Livros";
-            p.Preco = 19.89;
-
-            using (var context = new ProdutoDAOEntity())
-            {
-                context.Adicionar(p);
-            }
-        }
-
-        private static void GravarUsandoAdoNet()
-        {
-            Produto p = new Produto();
-            p.Nome = "Harry Potter e a Ordem da Fênix";
-            p.Categoria = "Livros";
-            p.Preco = 19.89;
-
-            using (var repo = new ProdutoDAO())
-            {
-                repo.Adicionar(p);
+                Console.WriteLine($"{e.Entity.ToString()} - {e.State}");
             }
         }
     }
