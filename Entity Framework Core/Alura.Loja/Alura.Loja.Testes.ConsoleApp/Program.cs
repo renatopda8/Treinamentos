@@ -11,20 +11,20 @@ namespace Alura.Loja.Testes.ConsoleApp
     {
         public static void Main(string[] args)
         {
-            var paoFrances = new Produto
+            var p1 = new Produto { Nome = "Suco de Laranja", Categoria = "Bebidas", PrecoUnitario = 8.79, Unidade = "Litros" };
+            var p2 = new Produto { Nome = "Café", Categoria = "Bebidas", PrecoUnitario = 12.45, Unidade = "Gramas" };
+            var p3 = new Produto { Nome = "Macarrão", Categoria = "Alimentos", PrecoUnitario = 4.23, Unidade = "Gramas" };
+
+            var promocaoDePascoa = new Promocao
             {
-                Nome = "Pão Francês",
-                PrecoUnitario = 0.40,
-                Unidade = "Unidade",
-                Categoria = "Padaria"
+                Descricao = "Páscoa Feliz",
+                DataInicio = DateTime.Now,
+                DataTermino = DateTime.Now.AddMonths(3)
             };
 
-            var compra = new Compra
-            {
-                Quantidade = 6,
-                Produto = paoFrances
-            };
-            compra.Preco = paoFrances.PrecoUnitario * compra.Quantidade;
+            promocaoDePascoa.IncluiProduto(p1);
+            promocaoDePascoa.IncluiProduto(p2);
+            promocaoDePascoa.IncluiProduto(p3);
 
             using (var contexto = new LojaContext())
             {
@@ -32,10 +32,7 @@ namespace Alura.Loja.Testes.ConsoleApp
                 var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
                 loggerFactory.AddProvider(SqlLoggerProvider.Create());
 
-                contexto.Compras.Add(compra);
-
-                ExibeEntries(contexto.ChangeTracker.Entries());
-
+                contexto.Promocoes.Add(promocaoDePascoa);
                 contexto.SaveChanges();
             }
         }
