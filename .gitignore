@@ -7,3 +7,5 @@ bin
 obj
 /Docker/Kubernetes/alura-sports/volume_mysql
 /Integração Contínua
+/IntegracaoContinua
+/Entity Framework Core/Alura.Loja
