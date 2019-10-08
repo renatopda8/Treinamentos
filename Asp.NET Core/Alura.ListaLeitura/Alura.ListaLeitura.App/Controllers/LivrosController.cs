@@ -7,42 +7,36 @@ using Alura.ListaLeitura.App.Repositorio;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Alura.ListaLeitura.App.Logica
+namespace Alura.ListaLeitura.App.Controllers
 {
-    public class LivrosController
+    public class LivrosController : Controller
     {
         private static string CarregaLista(IEnumerable<Livro> livros)
         {
-            var conteudoArquivo = HtmlUtils.CarregaArquivoHtml("lista");
-
-            foreach (var livro in livros)
-            {
-                conteudoArquivo = conteudoArquivo
-                    .Replace("#NOVO-ITEM#", $"<li>{livro.Titulo} - {livro.Autor}</li>#NOVO-ITEM#");
-            }
+            var conteudoArquivo = HtmlUtils.CarregaArquivoHtml("lista");          
 
             return conteudoArquivo.Replace("#NOVO-ITEM#", string.Empty);
         }
 
-        public static Task ParaLer(HttpContext context)
+        public IActionResult ParaLer()
         {
             var _repo = new LivroRepositorioCSV();
-            var html = CarregaLista(_repo.ParaLer.Livros);
-            return context.Response.WriteAsync(html);
+            ViewBag.Livros = _repo.ParaLer.Livros;
+            return View("lista");
         }
 
-        public static Task Lendo(HttpContext context)
+        public IActionResult Lendo()
         {
             var _repo = new LivroRepositorioCSV();
-            var html = CarregaLista(_repo.Lendo.Livros);
-            return context.Response.WriteAsync(html);
+            ViewBag.Livros = _repo.Lendo.Livros;
+            return View("lista");
         }
 
-        public static Task Lidos(HttpContext context)
+        public IActionResult Lidos()
         {
             var _repo = new LivroRepositorioCSV();
-            var html = CarregaLista(_repo.Lidos.Livros);
-            return context.Response.WriteAsync(html);
+            ViewBag.Livros = _repo.Lidos.Livros;
+            return View("lista");
         }
 
         public string Detalhes(int id)
